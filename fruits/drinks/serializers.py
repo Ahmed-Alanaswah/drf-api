@@ -5,5 +5,5 @@ from .models import Drink
 
 class DrinkSerializers(serializers.ModelSerializer):
     class Meta :
-        fields=['title','author','updated','timestamp','content']
+        fields=['title','author','updated','timestamp','content','published']
         model=Drink
