@@ -8,13 +8,12 @@ from .permissions import IsAuthentecatedOrReadOnly
 class DrinkList(generics.ListCreateAPIView):
     queryset=Drink.objects.all()
     serializer_class = DrinkSerializers
-    permission_classes = (IsAuthentecatedOrReadOnly
-    ,)
+    permission_class = (IsAuthentecatedOrReadOnly,)
 
 class DrinkDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset=Drink.objects.all()
     serializer_class = DrinkSerializers    
-    permission_classes = (IsAuthentecatedOrReadOnly,)
+    permission_class = (IsAuthentecatedOrReadOnly,)
 
 
 
